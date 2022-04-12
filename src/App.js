@@ -16,9 +16,7 @@ const buttonValues = [
 const Buttons = buttonValues.map((btn, i) => {
     return (
         <StyledButton 
-        value={btn} key={i}  
-        backgroundColor='hsl(30, 25%, 89%)'
-        textColor='hsl(221, 14%, 31%)'> 
+        value={btn} key={i}> 
         </StyledButton>
     )
 })

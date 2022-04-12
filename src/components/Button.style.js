@@ -5,13 +5,18 @@ export const StyledButton = styled(Buttons)`
     width: 90px;
     height: 50px;
     padding: 15px;
-    border: none;
+    border: 0;
     border-radius: 5px;
     font-size: 32px;
     box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%); 
-    background-color: ${(props) => props.backgroundColor};
-    color: ${(props) => props.textColor};
-
+    background-color: hsl(30, 25%, 89%);
+    color: hsl(221, 14%, 31%);
+    
+    ${props => console.log(props.value === "=")};
+    ${props => props.value === "=" && "background-color: hsl(6, 63%, 50%);"};
+    ${props => props.value === "=" && "box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);"};
+    ${props => props.value === "=" && "color: hsl(0, 0%, 100%);"};
+    
     &:hover{
        background-color: lightblue;
     }
