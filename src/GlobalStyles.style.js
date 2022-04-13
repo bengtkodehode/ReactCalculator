@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 700;
         background-color: hsl(222, 26%, 31%);
     }
-    
+
     h1 {
         margin: 0;
         padding: 0;

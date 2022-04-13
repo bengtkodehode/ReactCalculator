@@ -2,8 +2,10 @@ import React from "react"
 import { StyledButton } from "../src/components/Button.style"
 import { AppContainer } from "../src/components/container.style"
 import { GlobalStyles } from "./GlobalStyles.style"
+import { InputDisplay } from "./components/InputDisplay.styles"
 
 export default function App() {
+
 
 const buttonValues = [
     7,8,9,'DEL',
@@ -22,10 +24,13 @@ const Buttons = buttonValues.map((btn, i) => {
 })
 
 return (
+    <>
+    <InputDisplay />
     <AppContainer>
         <GlobalStyles />
         {Buttons}
     </AppContainer>
+    </>
     
 )
 }
