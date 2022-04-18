@@ -1,37 +1,28 @@
-import React from "react"
-import { StyledButton } from "../src/components/Button.style"
-import { AppContainer } from "../src/components/container.style"
-import { GlobalStyles } from "./GlobalStyles.style"
-import { InputDisplay } from "./components/InputDisplay.styles"
+import React, { useState } from 'react'
+import { Buttons } from './ButtonRender'
+import { ButtonContainer, StyleContainer } from './components/ButtonGrid'
+import { GlobalStyles } from './GlobalStyles.styles'
+import { InputDisplay } from './components/InputDisplay'
+import { ThemeChanger } from './components/ThemeChanger'
+import { BlueTheme, GrayTheme, PurpleTheme } from './components/styles/Themes.styles'
+import { ThemeProvider } from 'styled-components'
+import { Title } from './components/styles/Title.styled'
 
 export default function App() {
+  const [theme, setTheme] = useState(1)
 
-
-const buttonValues = [
-    7,8,9,'DEL',
-    4,5,6,"+",
-    1,2,3,"-",
-    ".",0,"/","x",
-    "RESET","="
-]
-
-const Buttons = buttonValues.map((btn, i) => {
-    return (
-        <StyledButton 
-        value={btn} key={i}> 
-        </StyledButton>
-    )
-})
-
-return (
-    <>
-    <InputDisplay />
-    <AppContainer>
+  return (
+    <ThemeProvider theme={theme === 1 ? BlueTheme : PurpleTheme}>
+      <StyleContainer>
         <GlobalStyles />
-        {Buttons}
-    </AppContainer>
-    </>
-    
-)
-}
+        <ThemeChanger>
+          <Title>calc</Title>
+        </ThemeChanger>
 
+        <InputDisplay />
+
+        <ButtonContainer>{Buttons}</ButtonContainer>
+      </StyleContainer>
+    </ThemeProvider>
+  )
+}
