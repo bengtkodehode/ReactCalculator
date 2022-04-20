@@ -9,17 +9,21 @@ import { ThemeProvider } from 'styled-components'
 import { Title } from './components/styles/Title.styled'
 
 export default function App() {
-  const [theme, setTheme] = useState(1)
+  const [theme, setTheme] = useState(true)
+
+  function handleClick() {
+    console.log('I was clicked!')
+  }
 
   return (
-    <ThemeProvider theme={theme === 1 ? BlueTheme : PurpleTheme}>
+    <ThemeProvider theme={theme ? BlueTheme : PurpleTheme}>
       <StyleContainer>
         <GlobalStyles />
         <ThemeChanger>
-          <Title>calc</Title>
+          <Title onClick={() => setTheme(!theme)}>calc</Title>
         </ThemeChanger>
 
-        <InputDisplay />
+        <InputDisplay onClick={handleClick} />
 
         <ButtonContainer>{Buttons}</ButtonContainer>
       </StyleContainer>

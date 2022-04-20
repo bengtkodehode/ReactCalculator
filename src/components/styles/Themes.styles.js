@@ -1,5 +1,7 @@
 export const BlueTheme = {
   MainBackground: 'hsl(222, 26%, 31%)',
+  ToggleBackground: ' hsl(223, 31%, 20%)',
+  ToggleBall: 'hsl(6, 63%, 50%)',
   KeypadBackground: 'hsl(223, 31%, 20%)',
   ScreenBackground: 'hsl(224, 36%, 15%)',
   TitleColor: 'hsl(0, 0%, 100%)',
@@ -19,6 +21,8 @@ export const BlueTheme = {
 
 export const GrayTheme = {
   MainBackground: 'hsl(0, 0%, 90%)',
+  ToggleBackground: 'hsl(0, 5%, 81%)',
+  ToggleBall: 'hsl(25, 98%, 40%)',
   KeypadBackground: 'hsl(0, 5%, 81%)',
   ScreenBackground: 'hsl(0, 0%, 93%)',
   TitleColor: 'hsl(60, 10%, 19%)',
@@ -38,6 +42,8 @@ export const GrayTheme = {
 
 export const PurpleTheme = {
   MainBackground: 'hsl(268, 75%, 9%)',
+  ToggleBackground: 'hsl(268, 71%, 12%)',
+  ToggleBall: 'hsl(176, 100%, 44%)',
   KeypadBackground: 'hsl(268, 71%, 12%)',
   ScreenBackground: 'hsl(268, 71%, 12%)',
   TitleColor: 'hsl(52, 100%, 62%)',
