@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ThemeChanger = styled.div`
+export const HeaderContainer = styled.div`
   width: 100%;
   margin: 20px auto;
   display: flex;
