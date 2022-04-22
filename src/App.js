@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { Buttons } from './ButtonRender'
-import { ButtonContainer, StyleContainer } from './components/ButtonContainer'
 import { GlobalStyles } from './GlobalStyles.styles'
-import { DisplayContainer } from './components/DisplayContainer'
 import { HeaderContainer } from './components/HeaderContainer'
-import { ThemeProvider } from 'styled-components'
 import { Title } from './components/styles/Title.styled'
 import { InputRange } from './components/styles/InputRange.styles'
+import { ThemeProvider } from 'styled-components'
+import { DisplayContainer } from './components/DisplayContainer'
 import { BlueTheme, GrayTheme, PurpleTheme } from './components/styles/Themes.styles'
+import { Buttons } from './ButtonRender'
+import { ButtonContainer, StyleContainer } from './components/ButtonContainer'
 
 export default function App() {
   const [theme, setTheme] = useState({ value: '1' })
@@ -24,12 +24,10 @@ export default function App() {
       <StyleContainer>
         <GlobalStyles />
         <HeaderContainer>
-          <Title onClick={() => setTheme(!theme)}>calc</Title>
+          <Title>calc</Title>
           <InputRange min={1} max={3} type="range" value={theme.value} onChange={changeTheme} />
         </HeaderContainer>
-
         <DisplayContainer />
-
         <ButtonContainer>{Buttons}</ButtonContainer>
       </StyleContainer>
     </ThemeProvider>
