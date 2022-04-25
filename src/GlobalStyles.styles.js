@@ -10,5 +10,11 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'League Spartan', sans-serif;
         background-color: ${(props) => props.theme.MainBackground};
     }
+    label {
+        align-self: center;
+        margin-right: 1em;
+        color: ${(props) => props.theme.TitleColor};
+        grid-area: lable;
+    }
 
 `

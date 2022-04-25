@@ -1,5 +1,6 @@
 import styled from 'styled-components'
+import Title from '../Title'
 
-export const Title = styled.h1`
+export const StyledTitle = styled(Title)`
   color: ${(props) => props.theme.TitleColor};
 `

@@ -13,10 +13,12 @@ export const InputRange = styled.input`
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     border-radius: 100%;
     background-color: ${(props) => props.theme.SingularkeyBackground};
     cursor: pointer;
   }
+
+  grid-area: inputrange;
 `
