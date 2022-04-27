@@ -21,6 +21,10 @@ export default function App() {
     })
   }
 
+  //change with state.
+
+  const [value, setValue] = useState('')
+
   return (
     <ThemeProvider theme={theme.value === '1' ? BlueTheme : theme.value === '2' ? GrayTheme : PurpleTheme}>
       <StyleContainer>
